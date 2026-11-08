@@ -1,0 +1,5 @@
+# O app Next.js fica na subpasta lista-de-tarefas/
+[build]
+  base    = "lista-de-tarefas"
+  command = "npm ci && npm run build"
+  publish = ".next"
