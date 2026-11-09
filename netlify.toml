@@ -3,8 +3,10 @@
 [build]
   base = "lista-de-tarefas"
   command = "npm run build"
-  publish = ".next"
+  publish = "out"
 
 [build.environment]
   # Next.js 16 exige Node 20.9 ou mais novo.
   NODE_VERSION = "22"
+  # O site é estático. Sem isso, o plugin do Next.js publica a pasta errada e a URL responde 404.
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
