@@ -1,0 +1,10 @@
+# O app Next.js fica na subpasta. Sem isso, a Netlify procura o
+# package.json na raiz do repositório e o build falha.
+[build]
+  base = "lista-de-tarefas"
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  # Next.js 16 exige Node 20.9 ou mais novo.
+  NODE_VERSION = "22"
